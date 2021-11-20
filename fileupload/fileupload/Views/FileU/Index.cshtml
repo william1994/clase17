@@ -1,0 +1,34 @@
+﻿@model fileupload.Models.Imagen
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+
+
+@using (Html.BeginForm("Index", "FileU", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    @Html.TextBoxFor(a => a.file, new { Type = "file" })
+    <input type="submit" />
+}
+
+
+<img src="~/img/framework.png" />
+
+
+
+
+
+<!--
+<form method="post" enctype="multipart/form-data">
+
+    <input type="file" name="file" />
+    <input type="submit" />
+
+</form>
+
+@Html.ActionLink("Go second page", "Second", new { @class = "btn btn-primary" })
+
+
+<a href="~/Controllers/Second" class="btn btn-primary" >Go second page</a>
+    -->
